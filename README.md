@@ -1,3 +1,3 @@
 # E-Business
 
-##Shop Idee:
+## Shop Idee:
