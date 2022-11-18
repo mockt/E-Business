@@ -1,22 +1,21 @@
 import React from 'react';
 import './../styles/login.css'
+import {Button, Card, TextField} from "@mui/material";
 
 function Login() {
     return (
         <div className="Login">
             <form>
-                <div className="card">
+                <Card variant={"elevation"} className={'card'}>
                     <div className="loginContainer">
-                        <label>Username : </label>
-                        <input type="text" placeholder="Enter Username" name="username" required></input>
-                        <label>Password : </label>
-                        <input type="password" placeholder="Enter Password" name="password" required></input>
+                        <TextField label="Username" variant="outlined" className={'inputField'}/>
+                        <TextField label="Passwort" variant="outlined" className={'inputField'}/>
                         <div className="buttons">
-                            <button type="submit">Login</button>
-                            <button type="button" className="cancelbtn"> Cancel</button>
+                            <Button type="submit" variant="contained">Login</Button>
+                            <Button type="button" variant="contained"> Cancel</Button>
                         </div>
                     </div>
-                </div>
+                </Card>
             </form>
         </div>
     )
