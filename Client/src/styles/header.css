@@ -1,3 +1,9 @@
 header{
     background-color: #F08080;
+    margin-bottom: 1rem;
+}
+
+header h1{
+    margin-top: 0;
+    padding: 1rem;
 }

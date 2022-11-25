@@ -1,25 +1,29 @@
 import React from 'react';
-import './../styles/login.css'
 import {Button, Card, TextField} from "@mui/material";
+import './../styles/register.css'
 
-function Login() {
+
+function Register() {
     return (
-        <div className="Login">
+        <div className={"register"}>
             <form>
                 <Card variant={"elevation"} className={'card'}>
-                    <h1>Login</h1>
-                    <div className="loginContainer">
+                    <h1>Registrieren</h1>
+                    <div className="registerContainer">
                         <TextField label="Email" variant="outlined" className={'inputField'}/>
                         <TextField label="Passwort" type="password" variant="outlined" className={'inputField'}/>
+                        <TextField label="Passwort wiederholen" type="password" variant="outlined" className={'inputField'}/>
                         <div className="buttons">
-                            <Button type="submit" variant="contained">Login</Button>
+                            <Button type="submit" variant="contained">Registrieren</Button>
                             <Button type="button" variant="contained"> Cancel</Button>
                         </div>
                     </div>
                 </Card>
             </form>
+
         </div>
     )
+
 }
 
-export default Login;
+export default Register;

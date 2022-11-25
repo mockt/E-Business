@@ -5,7 +5,7 @@ form{
 
 }
 
-.loginContainer{
+.registerContainer{
     display: flex;
     flex-direction: column;
 }

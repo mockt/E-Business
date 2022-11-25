@@ -5,6 +5,7 @@ import App from './App';
 import Login from './components/Login'
 import reportWebVitals from './reportWebVitals';
 import Header from "./components/Header";
+import Register from "./components/Register"
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -14,6 +15,7 @@ root.render(
         <App/>
         <Header/>
         <Login/>
+        <Register/>
     </React.StrictMode>
 );
 
