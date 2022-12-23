@@ -19,11 +19,16 @@ form{
 }
 
 .buttons button{
-    width: 5rem;
     margin: 0.5rem;
 }
 
 .buttons{
     display: flex;
     justify-content: center;
+}
+
+a p {
+    justify-self: center;
+    text-decoration: underline;
+
 }

@@ -1,0 +1,16 @@
+.home {
+    margin: 1rem;
+}
+
+.card {
+    width: 20rem;
+    margin: 1rem;
+}
+
+img {
+    width: 15rem;
+}
+
+.donuts {
+    display: flex;
+}

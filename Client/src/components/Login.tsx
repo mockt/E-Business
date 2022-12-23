@@ -15,7 +15,11 @@ function Login() {
                             <Button type="submit" variant="contained">Login</Button>
                             <Button type="button" variant="contained"> Cancel</Button>
                         </div>
+                        <a href={"/register"}>
+                            <p>Registrieren</p>
+                        </a>
                     </div>
+
                 </Card>
             </form>
         </div>

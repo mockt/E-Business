@@ -1,10 +1,18 @@
 import './../styles/header.css'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import React from "react";
 
-function Header(){
-    return(
+
+function Header() {
+    return (
         <header>
-            <h1>Donut Store</h1>
+            <a href={"/"}>
+                <h1>Donut Store</h1>
+            </a>
+            <a href={"/login"}>
+                <AccountCircleIcon sx={{fontSize: 50}}/>
+            </a>
+
         </header>
     )
 }
