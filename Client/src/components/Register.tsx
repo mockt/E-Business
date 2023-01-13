@@ -15,7 +15,9 @@ function Register() {
                         <TextField label="Passwort wiederholen" type="password" variant="outlined" className={'inputField'}/>
                         <div className="buttons">
                             <Button type="submit" variant="contained">Registrieren</Button>
-                            <Button type="button" variant="contained"> Cancel</Button>
+                            <a href={"/login"}>
+                            <Button type="button" variant="contained">Cancel</Button>
+                            </a>
                         </div>
                     </div>
                 </Card>

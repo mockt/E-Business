@@ -21,4 +21,11 @@ img {
 
 .toppings {
     display: flex;
+    flex-wrap: wrap;
 }
+
+.cartButton {
+    display: flex;
+    justify-content: center;
+}
+

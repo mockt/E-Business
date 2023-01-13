@@ -27,8 +27,11 @@ form{
     justify-content: center;
 }
 
-a p {
-    justify-self: center;
-    text-decoration: underline;
+a{
+    display: flex;
+    justify-content: center;
+}
 
+a p {
+    text-decoration: underline;
 }
