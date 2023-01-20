@@ -35,3 +35,7 @@ a{
 a p {
     text-decoration: underline;
 }
+
+.error-text {
+    color: red;
+}

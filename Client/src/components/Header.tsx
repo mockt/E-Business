@@ -10,7 +10,7 @@ function Header() {
                 <h1>Donut Store</h1>
             </a>
             <a href={"/login"}>
-                <AccountCircleIcon sx={{fontSize: 50}}/>
+                <AccountCircleIcon sx={{fontSize: 50}} className={'login-icon'}/>
             </a>
 
         </header>

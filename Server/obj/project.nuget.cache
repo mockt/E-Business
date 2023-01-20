@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+mPy0q2fyC4OWu45GC2VdLbc65dvv3bXbfuvfbR5HEpnkHbpm6h4OkKT2Ca9Qa1vhaMwJZ5gi9Q2NC3b2+YUCA==",
+  "dgSpecHash": "tBYn1+ceU5xj3VJ0JURm+azqC/651ZRmY5RF4Tu482hwjsSI3+lSHti+Q/r+dXuw0G/MbHcLn0PRetSL6BZY+A==",
   "success": true,
-  "projectFilePath": "/home/matteo/WebstormProjects/ebusiness/Server/Server.csproj",
+  "projectFilePath": "/home/matteo/Projects/E-Business/Server/Server.csproj",
   "expectedPackageFiles": [
     "/home/matteo/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.11/microsoft.aspnetcore.authentication.jwtbearer.6.0.11.nupkg.sha512",
     "/home/matteo/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
@@ -18,7 +18,10 @@
     "/home/matteo/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
     "/home/matteo/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
     "/home/matteo/.nuget/packages/system.identitymodel.tokens.jwt/6.10.0/system.identitymodel.tokens.jwt.6.10.0.nupkg.sha512",
-    "/home/matteo/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512"
+    "/home/matteo/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "/home/matteo/.nuget/packages/microsoft.netcore.app.ref/6.0.13/microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
+    "/home/matteo/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.13/microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
+    "/home/matteo/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.13/microsoft.netcore.app.host.linux-x64.6.0.13.nupkg.sha512"
   ],
   "logs": []
 }

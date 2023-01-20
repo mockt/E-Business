@@ -14,3 +14,7 @@ a {
     color: black;
     text-decoration: none;
 }
+
+.login-icon {
+    margin: auto 1rem auto auto;
+}

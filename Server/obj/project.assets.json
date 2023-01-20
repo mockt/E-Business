@@ -633,11 +633,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/matteo/WebstormProjects/ebusiness/Server/Server.csproj",
+      "projectUniqueName": "/home/matteo/Projects/E-Business/Server/Server.csproj",
       "projectName": "Server",
-      "projectPath": "/home/matteo/WebstormProjects/ebusiness/Server/Server.csproj",
+      "projectPath": "/home/matteo/Projects/E-Business/Server/Server.csproj",
       "packagesPath": "/home/matteo/.nuget/packages/",
-      "outputPath": "/home/matteo/WebstormProjects/ebusiness/Server/obj/",
+      "outputPath": "/home/matteo/Projects/E-Business/Server/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/matteo/.nuget/NuGet/NuGet.Config"
@@ -679,10 +679,25 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.13, 6.0.13]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[6.0.13, 6.0.13]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.13, 6.0.13]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -691,7 +706,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }
