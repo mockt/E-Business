@@ -1,9 +1,16 @@
 import React from "react";
-import {Button, Card} from "@mui/material";
+import {Button, ButtonProps, Card, styled} from "@mui/material";
 import './../styles/home.css'
 import donutpicture from '../img/img.png';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
+const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
+    color: theme.palette.getContrastText('#fff'),
+    backgroundColor: '#fff',
+    '&:hover': {
+        backgroundColor: '#fff',
+    },
+}));
 
 function Home() {
 
@@ -11,72 +18,71 @@ function Home() {
         <div className={"home"}>
             <h1>Donut auswählen</h1>
             <div className={"donuts"}>
-                    <Card variant={"elevation"} className={'card'}>
+                <ColorButton variant="outlined" className={"donutButtons"}>
+                    <div className={"buttonInhalt"}>
                         <img src={donutpicture} alt="Donut"/>
-                        <div className={"cardConatiner"}>
-                            <h2>Donut Natur</h2>
-                        </div>
-                    </Card>
-                    <Card variant={"elevation"} className={'card'}>
+                        <h2>Donut Natur</h2>
+                    </div>
+                </ColorButton>
+                <ColorButton variant="outlined" className={"donutButtons"}>
+                    <div className={"buttonInhalt"}>
                         <img src={donutpicture} alt="Donut"/>
-                        <div className={"cardConatiner"}>
-                            <h2>Donut Vegan</h2>
-
-                        </div>
-                    </Card>
-                    <Card variant={"elevation"} className={'card'}>
+                        <h2>Donut Vegan</h2>
+                    </div>
+                </ColorButton>
+                <ColorButton variant="outlined" className={"donutButtons"}>
+                    <div className={"buttonInhalt"}>
                         <img src={donutpicture} alt="Donut"/>
-                        <div className={"cardConatiner"}>
-                            <h2>Donut Gefüllt</h2>
-                        </div>
-                    </Card>
+                        <h2>Donut Gefüllt</h2>
+                    </div>
+                </ColorButton>
             </div>
 
             <h1>Glasur auswählen</h1>
             <div className={"glasur"}>
-                <Card variant={"elevation"} className={'card'}>
-                    <p>Braune Schokolade</p>
-                </Card>
-                <Card variant={"elevation"} className={'card'}>
+                <ColorButton variant="outlined" className={'glasurButtons'}>
+                    <p>Milchschokolade</p>
+                </ColorButton>
+                <ColorButton variant="outlined" className={'glasurButtons'}>
                     <p>Weisse Schokolade</p>
-                </Card>
-                <Card variant={"elevation"} className={'card'}>
+                </ColorButton>
+                <ColorButton variant="outlined" className={'glasurButtons'}>
                     <p>Bitterschokolade</p>
-                </Card>
-                <Card variant={"elevation"} className={'card'}>
+                </ColorButton>
+                <ColorButton variant="outlined" className={'glasurButtons'}>
                     <p>Karamell</p>
-                </Card>
+                </ColorButton>
             </div>
 
             <h1>Toppings</h1>
             <div className={"toppings"}>
-                <Card variant={"elevation"} className={'card'}>
+                <ColorButton variant="outlined" className={'toppingbutton'}>
                     <p>Erdbeeren</p>
-                </Card>
-                <Card variant={"elevation"} className={'card'}>
+                </ColorButton>
+                <ColorButton variant="outlined" className={'toppingbutton'}>
                     <p>Blaubeeren</p>
-                </Card>
-                <Card variant={"elevation"} className={'card'}>
+                </ColorButton>
+                <ColorButton variant="outlined" className={'toppingbutton'}>
                     <p>Kinderschokolade</p>
-                </Card>
-                <Card variant={"elevation"} className={'card'}>
+                </ColorButton>
+                <ColorButton variant="outlined" className={'toppingbutton'}>
                     <p>M&M's</p>
-                </Card>
-                <Card variant={"elevation"} className={'card'}>
+                </ColorButton>
+                <ColorButton variant="outlined" className={'toppingbutton'}>
                     <p>Toffee</p>
-                </Card>
-                <Card variant={"elevation"} className={'card'}>
+                </ColorButton>
+                <ColorButton variant="outlined" className={'toppingbutton'}>
                     <p>Oreo</p>
-                </Card>
-                <Card variant={"elevation"} className={'card'}>
+                </ColorButton>
+                <ColorButton variant="outlined" className={'toppingbutton'}>
                     <p>Kokosnussstreusel</p>
-                </Card>
+                </ColorButton>
             </div>
 
             <div className={"cartButton"}>
-                <Button variant={"contained"}> In den Warenkorb</Button>
+                <ColorButton variant={"contained"}> In den Warenkorb</ColorButton>
                 <a href={"/cart"}>
-                    <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
+                    <ShoppingCartOutlinedIcon/>
                 </a>
             </div>
 
