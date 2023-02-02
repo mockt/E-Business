@@ -7,5 +7,5 @@ Man kann den Donutteig auswählen (normal, vegan, laktosefrei), die Füllung, Gl
 
 # Dokumentation
 
-Frontend: React
+Frontend:
 ...
