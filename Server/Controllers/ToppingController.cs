@@ -6,9 +6,11 @@ using Newtonsoft.Json;
 
 namespace Server.Controllers;
 
+[ApiController]
+[Route("[controller]")]
 public class ToppingController : ControllerBase
 {
-    IFirebaseConfig config = new FirebaseConfig
+    public static readonly IFirebaseConfig Config = new FirebaseConfig
     {
         AuthSecret= "XKPi081r8gonlBqFIipMQ7gcCKDjsoEQCA9MbdJC", 
         BasePath = "https://ebusiness-23ad0-default-rtdb.europe-west1.firebasedatabase.app"
@@ -16,11 +18,11 @@ public class ToppingController : ControllerBase
     IFirebaseClient client;
     
     [HttpGet(Name = "GetToppings")]
-    public IEnumerable<Topping> Get()
+    public IEnumerable<Topping>? Get()
     {
-        client = new FireSharp.FirebaseClient(config);
+        client = new FireSharp.FirebaseClient(Config);
         var response = client.Get("Toppings");
-        var data = JsonConvert.DeserializeObject<dynamic>(response.Body);
-        return Array.Empty<Topping>();
+        var data = JsonConvert.DeserializeObject<Topping[]>(response.Body);
+        return data;
     }
 }
