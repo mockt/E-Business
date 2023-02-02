@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './../styles/login.css'
 import {Button, Card, TextField} from "@mui/material";
 
@@ -9,6 +9,10 @@ function Login() {
     const [password, setPassword] = useState<string>('');
     const [errorText, setErrorText] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(false);
+
+    useEffect(() => {
+        localStorage.removeItem('JWT');
+    }, []);
 
     const login = () => {
         setLoading(true);
@@ -34,6 +38,7 @@ function Login() {
             setErrorText('');
 
             response.json().then(value => {
+                console.log(value)
                 localStorage.setItem('JWT', value.idToken);
                 window.location.replace('/');
             })

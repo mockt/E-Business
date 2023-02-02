@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Button, ButtonProps, Card, styled} from "@mui/material";
 import './../styles/home.css'
 import donutpicture from '../img/img.png';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
+const ApiUrl = 'http://localhost:5001/Topping'
+
+const ColorButton = styled(Button)<ButtonProps>(({theme}) => ({
     color: theme.palette.getContrastText('#fff'),
     backgroundColor: '#fff',
     '&:hover': {
@@ -12,7 +14,45 @@ const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
     },
 }));
 
+function ToppingButton(props: {text: string}) {
+    return (
+        <ColorButton variant="outlined" className={'toppingbutton'}>
+            <p>{props.text}</p>
+        </ColorButton>
+    );
+}
+
 function Home() {
+    const [toppings, setToppings] = useState<{name: string}[]>();
+    const [didLoad, setDidLoad] = useState<boolean>(false);
+
+    useEffect(() => {
+        const jwt = localStorage.getItem('JWT');
+
+        if (!jwt) {
+            window.location.replace("/login");
+            return;
+        }
+
+        console.log(jwt);
+
+        fetch(ApiUrl, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + jwt
+            }
+        }).then((response) => response.json().then((body) => {
+            setToppings(body);
+            setDidLoad(true);
+        })).catch(() => {
+            //window.location.replace("/login");
+        })
+    }, []);
+
+    if (!didLoad) {
+        return <></>;
+    }
 
     return (
         <div className={"home"}>
@@ -56,27 +96,9 @@ function Home() {
 
             <h1>Toppings</h1>
             <div className={"toppings"}>
-                <ColorButton variant="outlined" className={'toppingbutton'}>
-                    <p>Erdbeeren</p>
-                </ColorButton>
-                <ColorButton variant="outlined" className={'toppingbutton'}>
-                    <p>Blaubeeren</p>
-                </ColorButton>
-                <ColorButton variant="outlined" className={'toppingbutton'}>
-                    <p>Kinderschokolade</p>
-                </ColorButton>
-                <ColorButton variant="outlined" className={'toppingbutton'}>
-                    <p>M&M's</p>
-                </ColorButton>
-                <ColorButton variant="outlined" className={'toppingbutton'}>
-                    <p>Toffee</p>
-                </ColorButton>
-                <ColorButton variant="outlined" className={'toppingbutton'}>
-                    <p>Oreo</p>
-                </ColorButton>
-                <ColorButton variant="outlined" className={'toppingbutton'}>
-                    <p>Kokosnussstreusel</p>
-                </ColorButton>
+                {toppings?.map(topping =>
+                    <ToppingButton text={topping.name}/>
+                )}
             </div>
 
             <div className={"cartButton"}>

@@ -11,6 +11,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy  =>
+    {
+        policy
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
+
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -29,11 +41,12 @@ builder.Services
 var app = builder.Build();
 
 //app.UseHttpsRedirection();
+app.UseCors();
+
+app.MapControllers();
 
 app.UseAuthorization();
 app.UseAuthentication();
-
-app.MapControllers();
 
 var client = new FireSharp.FirebaseClient(ToppingController.Config);
 

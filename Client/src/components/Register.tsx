@@ -17,6 +17,11 @@ function Register() {
             return;
         }
 
+        if (password.length < 6) {
+            setErrorText('The password has to be at least 6 characters long');
+            return;
+        }
+
         setLoading(true);
 
         const body = {
