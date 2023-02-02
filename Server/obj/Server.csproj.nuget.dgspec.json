@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/matteo/Projects/E-Business/Server/Server.csproj": {}
+    "/home/matteo/E-Business/Server/Server.csproj": {}
   },
   "projects": {
-    "/home/matteo/Projects/E-Business/Server/Server.csproj": {
+    "/home/matteo/E-Business/Server/Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/matteo/Projects/E-Business/Server/Server.csproj",
+        "projectUniqueName": "/home/matteo/E-Business/Server/Server.csproj",
         "projectName": "Server",
-        "projectPath": "/home/matteo/Projects/E-Business/Server/Server.csproj",
+        "projectPath": "/home/matteo/E-Business/Server/Server.csproj",
         "packagesPath": "/home/matteo/.nuget/packages/",
-        "outputPath": "/home/matteo/Projects/E-Business/Server/obj/",
+        "outputPath": "/home/matteo/E-Business/Server/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/matteo/.nuget/NuGet/NuGet.Config"
@@ -38,9 +38,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "FireSharp": {
+              "target": "Package",
+              "version": "[2.0.4, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.11, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -53,25 +61,10 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.13, 6.0.13]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[6.0.13, 6.0.13]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.13, 6.0.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -80,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
         }
       }
     }
