@@ -5,7 +5,7 @@ Ein Shop bei dem man personalisierte Donuts zusammenstellen kann.
 Man kann den Donutteig auswählen (normal, vegan, laktosefrei), die Füllung, Glasur und verschiedene Toppings.
 
 
-#Dokumentation
+# Dokumentation
 
 Frontend: React
 ...
