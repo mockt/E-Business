@@ -38,7 +38,6 @@ function Login() {
             setErrorText('');
 
             response.json().then(value => {
-                console.log(value)
                 localStorage.setItem('JWT', value.idToken);
                 window.location.replace('/');
             })

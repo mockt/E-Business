@@ -1,5 +1,6 @@
 .home {
-    margin: 1rem;
+    margin: 1rem auto;
+    max-width: 1000px;
 }
 
 .donutButton {
@@ -13,21 +14,12 @@ img {
     width: 15rem;
 }
 
-.donuts {
-    display: flex;
-}
-
-.glasur {
-    display: flex;
-}
-
-.toppings {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .cartButton {
     display: flex;
     justify-content: center;
 }
 
+.error-text {
+    color: red;
+    text-align: center;
+}
